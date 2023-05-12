@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cc.mrbird.febs.cos.dao.StatementInfoMapper">
+
+    <!-- 分页查询留言板信息 -->
+    <select id="selectStatementPage" resultType="java.util.LinkedHashMap">
+        select
+        si.id,
+        si.content,
+        si.user_id,
+        si.create_date,
+        ui.code,
+        ui.name,
+        ui.images
+        from
+            statement_info si
+                left join user_info ui on
+                (ui.user_id = si.user_id)
+        where
+            1 = 1
+        <if test="statementInfo.username != null and statementInfo.username != ''">
+            AND ui.name LIKE CONCAT('%',#{statementInfo.username},'%')
+        </if>
+        <if test="statementInfo.userId != null">
+            AND si.user_id LIKE CONCAT('%',#{statementInfo.userId},'%')
+        </if>
+        order by
+            si.create_date desc
+    </select>
+</mapper>

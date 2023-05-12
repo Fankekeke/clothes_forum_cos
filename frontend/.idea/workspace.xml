@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="589179d9-cfb0-4fc9-92d3-f3d0eb192930" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="28UdfRB3FHlRxy2ZoVHqwk9Izz6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/Project/小区物业管理系统/frontend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Project\汉服论坛系统\frontend\src\views\user\statement" />
+      <recent name="G:\Project\汉服论坛系统\frontend\src\views\user" />
+      <recent name="G:\Project\汉服论坛系统\frontend\src\views\user\personal" />
+      <recent name="G:\Project\汉服论坛系统\frontend\src\views\admin\clothes" />
+      <recent name="G:\Project\汉服论坛系统\frontend\src\views\admin\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Project\汉服论坛系统\frontend\src\views\admin\statement" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="589179d9-cfb0-4fc9-92d3-f3d0eb192930" name="Default Changelist" comment="" />
+      <created>1651275200277</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651275200277</updated>
+      <workItem from="1651275201375" duration="41388000" />
+      <workItem from="1651360324118" duration="3235000" />
+      <workItem from="1651377857831" duration="2013000" />
+      <workItem from="1651412563340" duration="485000" />
+      <workItem from="1651451021627" duration="1102000" />
+      <workItem from="1652706402434" duration="1384000" />
+      <workItem from="1652744074531" duration="3510000" />
+      <workItem from="1679063545512" duration="3373000" />
+      <workItem from="1679102648539" duration="11571000" />
+      <workItem from="1679142748565" duration="5366000" />
+      <workItem from="1679191546446" duration="52000" />
+      <workItem from="1679229181368" duration="1560000" />
+      <workItem from="1679235434043" duration="2805000" />
+      <workItem from="1679238887446" duration="824000" />
+      <workItem from="1679318683820" duration="1839000" />
+      <workItem from="1679324405611" duration="17000" />
+      <workItem from="1681477453181" duration="2301000" />
+      <workItem from="1681612725807" duration="200000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
