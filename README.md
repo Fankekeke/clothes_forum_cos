@@ -1,4 +1,4 @@
-### 基于SpringBoot的汉服论坛系统
+### 基于SpringBoot + Vue的汉服论坛系统
 
 #### 安装环境
 
