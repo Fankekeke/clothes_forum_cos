@@ -1,28 +1,17 @@
-### 基于SpringBoot + Vue的汉服论坛系统
+![](https://img.shields.io/badge/License-MIT-blue.svg)
 
-汉服同袍社交、约拍/妆造撮合、汉服二手市集、礼仪文化传承、避雷/红榜测评
+![](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)
 
-##### 管理员端：社区治理与内容导向
-###### 用户与模块管理： 统一维护同袍账号权限，并根据朝代或主题灵活配置论坛板块，构建井然有序的社区结构。
+![](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
-###### 敏感词管理： 建立自动化过滤机制，实时监测并拦截违规言论，确保论坛文化氛围的纯净与讨论环境的合规。
+# 基于 SpringBoot + Vue 的汉服论坛系统 (Hanfu Forum System)
 
-###### 汉服百科管理： 整理并发布权威的汉服形制与历史知识，通过科普专栏引导用户建立正确的传统文化认知。
+帖子管理 · 汉服百科 · 用户互动 · 敏感词过滤 · 模块管理 · 留言板 · 消息通知 · 多角色协同
 
-###### 公告与首页管理： 定制首页视觉展示并发布重大活动公告，通过优质内容推荐提升社区活跃度与品牌影响力。
-
-###### 消息与留言管理： 实时处理用户反馈与系统通知，通过高效的回复机制增强用户归属感，维护良好的社区生态。
-
-##### 用户端：同袍社交与内容互动
-###### 注册登录与信息： 提供便捷的入驻入口并支持个性化名片设置，方便同袍之间快速识别身份、建立社交关联。
-
-###### 发布贴子与推荐： 支持图文并茂地分享汉服穿搭或科普见解，通过算法推荐让优质内容触达更多同好。
-
-###### 贴子回复与点赞： 提供深度的互动空间，通过点赞鼓励优质创作，在交流互动中促进汉服文化的传播与讨论。
-
-###### 用户关注与留言： 建立同袍间的长期关注关系，并支持在留言板进行即时交流，打造高粘性的垂直社交圈层。
+本项目是一套面向汉服爱好者交流的垂直论坛系统，采用前后端分离架构，覆盖管理员与普通用户两类角色。系统围绕“帖子管理、汉服百科、模块管理、用户互动、敏感词管理、留言板、消息通知、首页管理”等核心业务设计，支持用户注册登录、发布帖子、回复互动、关注用户、点赞推荐、查看汉服百科，管理员完成用户管理、模块配置、内容审核、敏感词过滤、公告发布与论坛运营管理，适用于汉服文化社区、传统文化交流平台、汉服爱好者论坛、国风兴趣社区及汉服品牌粉丝互动平台
 
 #### 安装环境
+️**注意**：请确保您的开发环境已安装以下依赖。
 
 JAVA 环境 
 
@@ -30,64 +19,154 @@ Node.js环境 [https://nodejs.org/en/] 选择14.17
 
 Yarn 打开cmd， 输入npm install -g yarn !!!必须安装完毕nodejs
 
-Mysql 数据库 [https://blog.csdn.net/qq_40303031/article/details/88935262] 一定要把账户和密码记住
+Mysql 数据库 一定要把账户和密码记住
 
 redis
 
-Idea 编译器 [https://blog.csdn.net/weixin_44505194/article/details/104452880]
+Idea 编译器
 
-WebStorm OR VScode 编译器 [https://www.jianshu.com/p/d63b5bae9dff]
+WebStorm OR VScode 编译器
 
 #### 采用技术及功能
 
 后端：SpringBoot、MybatisPlus、MySQL、Redis、
 前端：Vue、Apex、Antd、Axios
 
+平台前端：vue(框架) + vuex(全局缓存) + rue-router(路由) + axios(请求插件) + apex(图表)  + antd-ui(ui组件) + 百度地图 API
+
 平台后台：springboot(框架) + redis(缓存中间件) + shiro(权限中间件) + mybatisplus(orm) + restful风格接口 + mysql(数据库)
 
 开发环境：windows10 or windows7 ， vscode or webstorm ， idea + lambok
 
-#### 前台启动方式
+---
 
+## 核心特性
+
+- **多角色权限管理**：区分管理员与普通用户两类角色，实现不同权限隔离与功能访问控制。
+- **帖子全流程管理**：支持用户发布帖子、上传图片/视频、分类标签、编辑删除，管理员可审核、置顶、加精、下架违规内容。
+- **汉服百科**：内置汉服知识百科模块，收录汉服形制、朝代风格、穿搭指南、礼仪文化等内容，支持管理员维护与用户浏览学习。
+- **模块/板块管理**：支持自定义论坛板块，如形制讨论、穿搭分享、活动约拍、二手交易、汉服科普等，便于内容分类聚合。
+- **用户互动体系**：支持帖子回复、用户关注、帖子点赞、帖子推荐（收藏/转发），构建活跃的社区互动氛围。
+- **敏感词管理**：配置敏感词库，对用户发布的帖子、回复、留言进行自动过滤与拦截，保障社区内容健康合规。
+- **留言板**：提供用户留言板功能，用户可发布公开留言，管理员可回复与管理留言内容。
+- **消息与通知**：支持用户间消息互动（回复提醒、点赞提醒、关注提醒），管理员可发布系统公告与全站通知。
+- **首页管理**：管理员可配置首页推荐内容、轮播图、热门帖子、精华板块，打造个性化论坛首页展示。
+---
+
+## 适用场景
+
+- 汉服文化爱好者交流社区
+- 传统文化兴趣论坛
+- 国风/汉服品牌粉丝互动平台
+- 高校汉服社团线上社区
+- 汉服活动约拍与交流平台
+- 汉服形制科普与讨论社区
+- 国风文化综合论坛
+---
+
+## 功能模块概览
+
+## 管理员端
+
+管理员负责论坛整体运营、内容审核、用户管理、模块配置与社区氛围维护：
+
+### 内容与模块管理
+
+- **模块管理**：创建与维护论坛板块，如形制讨论、穿搭分享、活动约拍、二手交易、汉服科普等，支持板块排序与权限配置。
+- **汉服百科**：维护汉服知识百科内容，包括形制介绍、朝代风格、穿搭指南、礼仪文化、面料工艺等，支持分类管理与图文编辑。
+- **首页管理**：配置论坛首页展示内容，包括轮播图、推荐帖子、热门板块、精华内容，打造个性化首页布局。
+- **帖子管理**：审核用户发布的帖子，支持置顶、加精、下架、删除违规内容，维护社区内容质量。
+
+### 用户与互动管理
+
+- **用户管理**：管理注册用户信息，包括账号状态、角色分配、实名认证，支持禁用违规账号与重置密码。
+- **消息管理**：查看平台消息记录，包括用户间私信、系统通知，支持消息审核与违规内容处理。
+- **消息回复**：管理员可回复用户消息与留言，解答用户疑问，处理用户反馈与投诉。
+- **用户关注**：查看用户关注关系数据，了解社区活跃用户与核心粉丝群体。
+
+### 安全与公告管理
+
+- **敏感词管理**：配置与维护敏感词库，设置过滤规则（替换/拦截/审核），对用户发布内容进行自动过滤，保障社区内容合规。
+- **公告管理**：发布系统公告，包括活动通知、规则更新、社区规范、维护通知与安全提示，支持置顶与定时发布。
+- **留言板管理**：查看与管理用户留言板内容，回复用户留言，删除违规留言，维护留言板秩序。
+
+---
+
+## 用户端
+
+用户端面向普通注册用户，提供注册登录、发布帖子、互动回复、关注点赞、浏览百科与消息查看功能：
+
+### 账户与个人信息
+
+- **登录注册**：支持手机号、邮箱等方式注册登录，密码加密存储，支持第三方登录（可选）。
+- **个人信息**：维护昵称、头像、个人简介、汉服偏好、所在地等个人信息，展示个人主页。
+
+### 帖子与互动
+
+- **发布帖子**：选择板块发布帖子，支持图文混排、图片/视频上传、标签选择，分享汉服穿搭、形制讨论、活动心得等内容。
+- **帖子回复**：对他人帖子进行回复评论，参与讨论互动，支持回复嵌套与点赞。
+- **帖子推荐**：收藏喜欢的帖子或推荐给好友，便于后续查看与分享。
+- **帖子点赞**：对喜欢的帖子进行点赞，表达认可与支持。
+- **用户关注**：关注感兴趣的汉服爱好者，查看其动态与发布内容，构建个人社交圈。
+
+### 留言与消息
+
+- **发布留言**：在留言板发布公开留言，分享心情、建议或交流心得，查看他人留言并互动。
+- **我的消息**：接收回复提醒、点赞提醒、关注提醒、系统公告等消息，支持标记已读与删除。
+
+### 汉服百科
+
+- **浏览百科**：浏览汉服百科内容，学习形制知识、穿搭技巧、礼仪文化，支持按分类搜索与收藏。
+
+---
+
+## 项目结构
+
+```text
+pharmacy-dispensing-system/
+├── backend/            # 后端 API 服务
+│   ├── src/
+│   │   ├── controllers/  # 控制器
+│   │   ├── models/       # 数据模型
+│   │   ├── routes/       # 路由
+│   │   └── services/     # 业务逻辑
+│   └── package.json
+├── frontend/           # 前端 Web 应用
+│   ├── src/
+│   │   ├── views/      # 页面视图
+│   │   ├── components/ # 公共组件
+│   │   └── store/      # 状态管理
+│   └── package.json
+├── docs/               # 项目文档与 API 接口说明
+├── LICENSE
+└── README.md
+```
+---
+
+
+#### 前台启动方式
 安装所需文件 yarn install 
 运行 yarn run dev
 
-#### 后端启动方式
-
-1.首先启动redis，进入redis目录终端。输入redis-server回车
-2.导入sql文件，修改数据库与redis连接配置
-3.idea中启动后端项目
-
-### 管理员
-公告管理，用户管理，消息管理，公告管理，敏感词管理，模块管理，消息回复，汉服百科，留言板，首页管理
-
-### 用户 
-登录注册，个人信息，发布贴子，贴子回复，发布留言，贴子推荐，用户关注，贴子点赞
-
 #### 默认后台账户密码
-
 [管理员]
 admin
-1234qwer
+123456
 
 [用户]
 fank
-1234qwer
-
-
+123456
 
 #### 项目截图
-
 |  |  |
 |---------------------|---------------------|
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153075384.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153189151.jpg) |
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153056391.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153172849.jpg) |
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153279164.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153160000.jpg) |
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153253317.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153147165.jpg) |
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153236440.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153124704.jpg) |
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153222837.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153094744.jpg) |
-|![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/1679153210100.jpg) | ![](https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/work/936e9baf53eb9a217af4f89c616dc19.png) |
-
+| ![](./assets/image%20(1).jpg) | ![](./assets/image%20(2).jpg) |
+| ![](./assets/image%20(3).jpg) | ![](./assets/image%20(4).jpg) |
+| ![](./assets/image%20(5).jpg) | ![](./assets/image%20(6).jpg) |
+| ![](./assets/image%20(7).jpg) | ![](./assets/image%20(8).jpg) |
+| ![](./assets/image%20(9).jpg) | ![](./assets/image%20(10).jpg) |
+| ![](./assets/image%20(11).jpg) | ![](./assets/image%20(12).jpg) |
+| ![](./assets/image%20(13).jpg) |
 
 #### 演示视频
 
@@ -105,7 +184,10 @@ WeChat: `Storm_Berserker`
 
 > 项目部署调试不好包退！功能逻辑没讲明白包退！
 
+<div align=center><img align="center" src="./assets/product_word.png" alt="fankekeke" /></div>
+
 #### 其它资源
+[2026年-答辩顺利通过-客户评价🀄](https://berserker287.github.io/2026/06/29/2026%E5%B9%B4%E7%AD%94%E8%BE%A9%E9%A1%BA%E5%88%A9%E9%80%9A%E8%BF%87/)
 
 [2025年-答辩顺利通过-客户评价🍜](https://berserker287.github.io/2025/06/18/2025%E5%B9%B4%E7%AD%94%E8%BE%A9%E9%A1%BA%E5%88%A9%E9%80%9A%E8%BF%87/)
 
@@ -123,11 +205,14 @@ WeChat: `Storm_Berserker`
 
 [计算机专业毕业答辩小tips](https://zhuanlan.zhihu.com/p/145911029)
 
-
 #### 接JAVAWEB毕设，纯原创，价格公道，诚信第一
 
 `网站建设、小程序、H5、APP、各种系统 选题+开题报告+任务书+程序定制+安装调试+项目讲解+论文+答辩PPT`
 
 More info: [悲伤的橘子树](https://berserker287.github.io/)
-****
-<p><img align="center" src="https://fank-bucket-oss.oss-cn-beijing.aliyuncs.com/img/%E5%90%88%E4%BD%9C%E7%89%A9%E6%96%99%E6%A0%B7%E5%BC%8F%20(3).png" alt="fankekeke" /></p>
+
+<div align="center"><img align="center" src="./assets/chat_qr_code.png" alt="fankekeke" width=250 /></div>
+
+<p><img align="center" src="./assets/wechat_group.png" alt="fankekeke" /></p>
+
+**感谢查看**
